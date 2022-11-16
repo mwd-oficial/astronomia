@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,11 +12,23 @@
         body {
             background-image: url("../imagens/espaço3.jpg");
         }
+
         main {
             border: 10px solid var(--cor3);
         }
-        #pcenter {
+
+        #divlista {
             margin: auto;
+            width: 20%;
+        }
+
+        li {
+            text-align: left;
+            padding: 10px 0px;
+        }
+
+        #pcenter {
+            text-align: center;
         }
     </style>
 </head>
@@ -28,25 +41,43 @@
         <img src="../imagens/setavoltar.svg" alt="" onclick="fechar()" id="setavoltar">
     </header>
     <main>
+        <div id="imgperdiv">
+            <div id="imgperampdiv">
+                <img src="../imagens/plaimg.webp" alt="" id="imgperamp" onclick="minimizar()">
+                <p id="imgperampp">Clique para minimizar</p>
+            </div>
+        </div>
         <h1 style="background-color: transparent;">Os planetas do sistema solar</h1>
-        <p id="pcenter"> 
-        Os planetas do sistema solar são: <br>
-        1 Mercúrio.<br>
-        2 Vênus.<br>
-        3 Terra.<br>
-        4 Marte.<br>
-        5 Júpiter.<br>
-        6 Saturno.<br>
-        7 Urano.<br>
-        8 Netuno.<br>
-        </p>
-        <p>Hoje em dia, o Plutão não é mais considerado um planeta. O principal parâmetro que levou a União Internacional da Astronomia (IAU) a remover Plutão da lista de planetas é o fato de ele não ser capaz de conduzir a sua própria órbita, ou seja, ele depende de outros corpos celestes para influenciar seu trajeto. Agora ele é chamado de planeta anão.</p>
-       
+        <div id="imgpernordiv">
+            <img src="../imagens/plaimg.webp" alt="" id="imgpernor" onclick="ampliar()">
+            <p id="imgperp">Clique para ampliar</p>
+        </div>
+        <p id="pcenter">planetas do sistema solar são:</p>
+        <div id="divlista">
+            <ol type="1">
+                <li>Mercúrio.
+                <li>Vênus.
+                <li>Terra.
+                <li>Marte.
+                <li>Júpiter.
+                <li>Saturno.
+                <li>Urano.
+                <li>Netuno.
+            </ol>
+
+        </div>
+        <p>Hoje em dia, o Plutão não é mais considerado um planeta. O principal parâmetro que levou a União
+            Internacional da Astronomia (IAU) a remover Plutão da lista de planetas é o fato de ele não ser capaz de
+            conduzir a sua própria órbita, ou seja, ele depende de outros corpos celestes para influenciar seu trajeto.
+            Agora ele é chamado de planeta anão.</p>
+
     </main>
     <footer>
         <p class="sombra">Clique na imagem a seguir para acessar meu GitHub:</p><br>
-        <a href="https://github.com/mwd-oficial" target="_blank"><img src="../imagens/logoMWDt.png" alt="logo" id="logo"></a>
+        <a href="https://github.com/mwd-oficial" target="_blank"><img src="../imagens/logoMWDt.png" alt="logo"
+                id="logo"></a>
     </footer>
     <script src="../js/principal.js"></script>
 </body>
+
 </html>

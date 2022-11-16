@@ -10,10 +10,15 @@
 
 :root {
     --cor1: rgb(0, 107, 96);
+    --cor1t: rgb(0, 107, 96, .5);
     --cor2: rgb(118, 0, 122);
+    --cor2t: rgb(118, 0, 122, .5);
     --cor3: rgb(0, 12, 133);
+    --cor3t: rgb(0, 12, 133, .5);
     --cor4: rgb(35, 130, 7);
+    --cor4t: rgb(35, 130, 7, .5);
     --cor5: rgb(120, 102, 6);
+    --cor5t: rgb(120, 102, 6, .5);
 }
 
 ::-webkit-scrollbar {
@@ -33,8 +38,13 @@
     display: none;
 }
 
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
 body {
     min-height: 100vh;
+    max-width: 100vw;
     font-family: 'Share Tech Mono', monospace;
     color: white;
     text-align: center;
@@ -45,48 +55,58 @@ body {
     background-position: center center;
     background-attachment: fixed;
     animation: fundoanimado 1s linear infinite;
-
+    overflow-x: hidden;
 }
 
 @keyframes fundoanimado {
     0% {
         background-image: url("../imagens/espaço.jpg");
     }
+
     10% {
         background-image: url("../imagens/espaço2.jpg");
     }
+
     20% {
         background-image: url("../imagens/espaço3.jpg");
     }
+
     30% {
         background-image: url("../imagens/espaço4.jpg");
     }
+
     40% {
         background-image: url("../imagens/espaço5.jpg");
     }
+
     50% {
         background-image: url("../imagens/espaço6.jpg");
     }
+
     60% {
         background-image: url("../imagens/espaço7.jpeg");
     }
+
     70% {
         background-image: url("../imagens/espaço8.jpg");
     }
+
     80% {
         background-image: url("../imagens/espaço9.jpg");
     }
+
     90% {
         background-image: url("../imagens/espaço10.jpg");
     }
+
     100% {
         background-image: url("../imagens/espaço.jpg");
     }
-    
+
 }
 
 #carregabox {
-    position: absolute;   
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -122,12 +142,12 @@ body {
     display: none;
 }
 
-#bcarregar:hover {
+#bcarregar:hover, .bcarregarOnClick {
     transform: scale(1.2);
     box-shadow: 0px 0px 20px white,
-    0px 0px 20px rgba(255, 255, 255, .75),
-    0px 0px 20px rgba(255, 255, 255, .5),
-    0px 0px 20px rgba(255, 255, 255, 0.25);
+        0px 0px 20px rgba(255, 255, 255, .75),
+        0px 0px 20px rgba(255, 255, 255, .5),
+        0px 0px 20px rgba(255, 255, 255, 0.25);
 }
 
 @keyframes preload {
@@ -147,6 +167,75 @@ p {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+#astronauta {
+    position: absolute;
+    transform: rotateZ(10deg);
+    animation: animastronauta 60s linear infinite;
+    z-index: -1;
+}
+
+@keyframes animastronauta {
+    0% {
+        bottom: -20%;
+        right: -20%;
+        transform: rotateZ(100deg);
+    }
+
+    50% {
+        transform: rotateZ(-100deg);
+    }
+
+    100% {
+        bottom: 100%;
+        right: 110%;
+        transform: rotateZ(-250deg);
+    }
+}
+
+@keyframes animastronautacell {
+    0% {
+        bottom: -20%;
+        right: 20%;
+        transform: rotateZ(100deg);
+    }
+
+    50% {
+        transform: rotateZ(-100deg);
+    }
+
+    100% {
+        bottom: 100%;
+        right: 20%;
+        transform: rotateZ(-250deg);
+    }
+}
+
+.player-ctrl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volumeimg {
+    width: 30px;
+}
+
+#podcast-play, #podcast-pause {
+    background-color: rgb(241, 243, 244);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0px;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+#podcast-play:hover, #podcast-pause:hover, .podOnClick {
+    box-shadow: 0px 0px 20px white,
+        0px 0px 20px rgba(255, 255, 255, .75),
+        0px 0px 20px rgba(255, 255, 255, .5),
+        0px 0px 20px rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
 
 #deslize {
     margin-top: 40px;
@@ -159,9 +248,10 @@ p {
 }
 
 .slide-content {
-    margin: 0 60px;
+    margin: 0px 60px 10px 60px;
     overflow: hidden;
     border-radius: 25px;
+    padding: 20px;
 }
 
 .card {
@@ -175,46 +265,7 @@ p {
     align-items: center;
     margin-bottom: 30px;
     text-decoration: none;
-}
-
-#big {
-    border: 5px solid var(--cor1);
-}
-
-#com {
-    border: 5px solid var(--cor2);
-}
-
-#pla {
-    border: 5px solid var(--cor3);
-}
-
-#ast {
-    border: 5px solid var(--cor4);
-}
-
-#mov {
-    border: 5px solid var(--cor5);
-}
-
-#rel {
-    border: 5px solid var(--cor1);
-}
-
-#hem {
-    border: 5px solid var(--cor2);
-}
-
-#lua {
-    border: 5px solid var(--cor3);
-}
-
-#ecl {
-    border: 5px solid var(--cor4);
-}
-
-#inf {
-    border: 5px solid var(--cor5);
+    transition-duration: .5s;
 }
 
 .card-content {
@@ -241,16 +292,169 @@ p {
     font-size: 20px;
     color: white;
     text-align: center;
+    transition-duration: .5s;
 }
+
+#big {
+    border: 5px solid var(--cor1);
+}
+
+#big:hover, #rel:hover, .bigrel {
+    box-shadow: 0px 0px 20px var(--cor1),
+        0px 0px 20px var(--cor1t),
+        0px 0px 20px var(--cor1t),
+        0px 0px 20px var(--cor1t);
+    box-shadow: inset 0px 0px 20px var(--cor1),
+        0px 0px 20px var(--cor1t),
+        0px 0px 20px var(--cor1t),
+        0px 0px 20px var(--cor1t);
+    transform: scale(1.05);
+}
+
+
+#big:hover .description,
+#rel:hover .description, 
+.bigreldes {
+    color: var(--cor1);
+    transform: scale(1.2);
+}
+
+#com {
+    border: 5px solid var(--cor2);
+}
+
+#com:hover,
+#hem:hover,
+.comhem {
+    box-shadow: 0px 0px 20px var(--cor2),
+        0px 0px 20px var(--cor2t),
+        0px 0px 20px var(--cor2t),
+        0px 0px 20px var(--cor2t);
+    box-shadow: inset 0px 0px 20px var(--cor2),
+        0px 0px 20px var(--cor2t),
+        0px 0px 20px var(--cor2t),
+        0px 0px 20px var(--cor2t);
+    transform: scale(1.05);
+}
+
+#com:hover .description,
+#hem:hover .description,
+.comhemdes {
+    color: var(--cor2);
+    transform: scale(1.2);
+}
+
+#pla {
+    border: 5px solid var(--cor3);
+}
+
+#pla:hover,
+#lua:hover,
+.plalua {
+    box-shadow: 0px 0px 20px var(--cor3),
+        0px 0px 20px var(--cor3t),
+        0px 0px 20px var(--cor3t),
+        0px 0px 20px var(--cor3t);
+    box-shadow: inset 0px 0px 20px var(--cor3),
+        0px 0px 20px var(--cor3t),
+        0px 0px 20px var(--cor3t),
+        0px 0px 20px var(--cor3t);
+    transform: scale(1.05);
+}
+
+#pla:hover .description,
+#lua:hover .description,
+.plaluades {
+    color: var(--cor3);
+    transform: scale(1.2);
+}
+
+#ast {
+    border: 5px solid var(--cor4);
+}
+
+#ast:hover,
+#ecl:hover,
+.astecl {
+    box-shadow: 0px 0px 20px var(--cor4),
+        0px 0px 20px var(--cor4t),
+        0px 0px 20px var(--cor4t),
+        0px 0px 20px var(--cor4t);
+    box-shadow: inset 0px 0px 20px var(--cor4),
+        0px 0px 20px var(--cor4t),
+        0px 0px 20px var(--cor4t),
+        0px 0px 20px var(--cor4t);
+    transform: scale(1.05);
+}
+
+#ast:hover .description,
+#ecl:hover .description,
+.astecldes {
+    color: var(--cor4);
+    transform: scale(1.2);
+}
+
+#mov {
+    border: 5px solid var(--cor5);
+}
+
+#mov:hover,
+#inf:hover,
+.movinf {
+    box-shadow: 0px 0px 20px var(--cor5),
+        0px 0px 20px var(--cor5t),
+        0px 0px 20px var(--cor5t),
+        0px 0px 20px var(--cor5t);
+    box-shadow: inset 0px 0px 20px var(--cor5),
+        0px 0px 20px var(--cor5t),
+        0px 0px 20px var(--cor5t),
+        0px 0px 20px var(--cor5t);
+    transform: scale(1.05);
+
+}
+
+#mov:hover .description,
+#inf:hover .description,
+.movinfdes {
+    color: var(--cor5);
+    transform: scale(1.2);
+}
+
+#rel {
+    border: 5px solid var(--cor1);
+}
+
+#hem {
+    border: 5px solid var(--cor2);
+}
+
+#lua {
+    border: 5px solid var(--cor3);
+}
+
+#ecl {
+    border: 5px solid var(--cor4);
+}
+
+#inf {
+    border: 5px solid var(--cor5);
+}
+
 
 .swiper-navBtn {
     background-color: white;
     color: black;
     transition: background-color 0.3s ease;
+    margin: 0px 20px;
 }
 
 .swiper-navBtn:hover {
-    background-color: lightgray;
+    background-color: white;
+    box-shadow: 0px 0px 20px white,
+        0px 0px 20px rgba(255, 255, 255, .75),
+        0px 0px 20px rgba(255, 255, 255, .5),
+        0px 0px 20px rgba(255, 255, 255, 0.25);
+
 }
 
 .swiper-navBtn::before,
@@ -271,10 +475,22 @@ p {
     height: 50px;
     background-color: gray;
     opacity: 1;
+    box-shadow: 0px 0px 20px gray,
+        0px 0px 20px rgba(128, 128, 128, .75),
+        0px 0px 20px rgba(128, 128, 128, .5),
+        0px 0px 20px rgba(128, 128, 128, 0.25);
 }
 
 .swiper-pagination-bullet-active {
     background-color: white;
+    box-shadow: 0px 0px 20px white,
+        0px 0px 20px rgba(255, 255, 255, .75),
+        0px 0px 20px rgba(255, 255, 255, .5),
+        0px 0px 20px rgba(255, 255, 255, 0.25);
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    padding: 20px 0px;
 }
 
 footer {
@@ -288,17 +504,14 @@ footer {
     margin-bottom: 60px;
     margin-top: 60px;
     border-radius: 20px;
+    transition-duration: .5s;
 }
 
-#logo:hover {
-    transition-duration: 0.5s;
+#logo:hover,
+.logoOnClick {
     transform: rotateZ(360deg) scale(1.5);
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
-}
-
-#logo:not(:hover) {
-    transition-duration: 0.5s;
 }
 
 @media screen and (max-width: 768px) {
@@ -309,21 +522,39 @@ footer {
     .swiper-navBtn {
         display: none;
     }
+
     .cardtra {
         display: none;
     }
+
     .swiper-pagination-bullet {
         width: 25px;
         height: 25px;
     }
+
     h1 {
         font-size: 1.5em;
     }
+
+    #podcast-play:hover, #podcast-pause:hover,  #bcarregar:hover, #podcast-play:hover, #podcast-pause:hover, #big:hover, #rel:hover, #big:hover .description, #rel:hover .description, #com:hover, #hem:hover, #com:hover .description, #hem:hover .description, #pla:hover, #lua:hover, #pla:hover .description, #lua:hover .description, #ast:hover, #ecl:hover, #ast:hover .description, #ecl:hover .description, #mov:hover, #inf:hover, #mov:hover .description, #inf:hover .description{
+        color: white;
+        box-shadow: 0px 0px 0px transparent;
+        transform: scale(1);
+    }
+
 }
 
 @media screen and (max-width: 400px) {
     #logo:hover {
+        transform: rotateZ(0deg) scale(1);
+        background-color: transparent;
+    }
+    .logoOnClick {
         transform: rotateZ(360deg);
+    }
+    
+    #astronauta {
+        animation: animastronautacell 60s linear infinite;
     }
 
 }

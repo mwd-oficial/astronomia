@@ -29,6 +29,10 @@
     background-color: black;
 }
 
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
 body {
     min-height: 100vh;
     font-family: 'Share Tech Mono', monospace;
@@ -40,7 +44,7 @@ body {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-
+    overflow-x: hidden;
 }
 
 
@@ -50,6 +54,16 @@ body {
     border-radius: 50%;
     margin: 10px;
     cursor: pointer;
+    transition-duration: .5s;
+}
+
+#setavoltar:hover,
+.setavoltarOnClick {
+    box-shadow: 0px 0px 20px white,
+        0px 0px 20px rgba(255, 255, 255, .75),
+        0px 0px 20px rgba(255, 255, 255, .5),
+        0px 0px 20px rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
 }
 
 main {
@@ -82,6 +96,112 @@ p {
     padding: 10px 0px;
 }
 
+#imgpernordiv,
+#imgpernordiv2,
+#imgpernordiv3,
+#imgpernordiv4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition-duration: .5s;
+    border-radius: 20px;
+
+    
+}
+
+#imgperp,
+#imgperampp,
+#imgperp2,
+#imgperampp2,
+#imgperp3,
+#imgperampp3,
+#imgperp4,
+#imgperampp4 {
+    color: black;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+
+    
+}
+
+#imgpernor,
+#imgpernor2,
+#imgpernor3,
+#imgpernor4 {
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 20px 20px 0px 0px;
+}
+
+#imgpernordiv:hover,
+.imgpernordivOnClick,
+#imgpernordiv2:hover,
+#imgpernordiv3:hover,
+#imgpernordiv4:hover {
+    box-shadow: 0px 0px 20px 5px white;
+    transform: scale(1.05);
+}
+
+#imgperdiv,
+#imgperdiv2,
+#imgperdiv3,
+#imgperdiv4 {
+    background-color: rgba(0, 0, 0, .7);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#imgperampdiv,
+#imgperampdiv2,
+#imgperampdiv3,
+#imgperampdiv4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 2px solid white;
+    transition-duration: .5s;
+    cursor: pointer;
+    width: 60vw;
+}
+
+#imgperamp,
+#imgperamp2,
+#imgperamp3,
+#imgperamp4 {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+#imgperampdiv:hover,
+.imgperampdivOnClick,
+#imgperampdiv2:hover,
+.imgperampdiv2OnClick,
+#imgperampdiv3:hover,
+.imgperampdiv3OnClick,
+#imgperampdiv4:hover,
+.imgperampdiv4OnClick {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px 5px white;
+}
+
 footer {
     margin-top: 20px;
 }
@@ -111,14 +231,31 @@ footer {
     h1 {
         font-size: 1.5em;
     }
+
     main {
         padding: 10px;
     }
+
+    #setavoltar:hover, 
+    #imgpernordiv:hover, #imgperampdiv:hover,
+    #imgpernordiv2:hover, #imgperampdiv2:hover,
+    #imgpernordiv3:hover, #imgperampdiv3:hover,
+    #imgpernordiv4:hover, #imgperampdiv4:hover {
+        box-shadow: 0px 0px 0px transparent;
+        transform: scale(1);
+    }
+
+    #imgperampdiv,
+    #imgperampdiv2,
+    #imgperampdiv3,
+    #imgperampdiv4 {
+        width: 90vw;
+    }
+
 }
 
 @media screen and (max-width: 400px) {
     #logo:hover {
         transform: rotateZ(360deg);
     }
-
 }

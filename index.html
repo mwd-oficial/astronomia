@@ -18,15 +18,26 @@
         <button id="bcarregar" onclick="ace()">Acessar</button>
     </div>
     <div id="conteudo">
+        <img src="imagens/astronauta.png" alt="" id="astronauta">
         <header>
             <h1>Astronomia: Principais Conceitos</h1><br>
-            <p style="margin-bottom: 10px;">Feito por Mateus Gonçalves, João Pedro, Gabriel Chieregato e João Grandchamp</p><br>
-            <audio src="espaço.mp3" id="myAudio" controls loop></audio>
+            <p style="margin-bottom: 10px;">Feito por Mateus Gonçalves, João Pedro, Gabriel Chieregato e João Grandchamp
+            </p><br>
+            <audio src="espaço.mp3" id="podcast-audio" loop></audio>
+            <div class="player-ctrl">
+
+                <!-- Play Button -->
+                <a id="podcast-play" onclick="playShow()" style="display:none;"><img src="imagens/volume-mute.svg"
+                        alt="" class="volumeimg"></a>
+
+                <!-- Pause Button -->
+                <a id="podcast-pause" onclick="pauseShow()"><img src="imagens/volume-high.svg" alt=""
+                        class="volumeimg"></a>
+            </div>
             <hr style="margin-top: 10px;">
         </header>
         <main>
-
-            <p id="deslize">Deslize para a esquerda ou para a direita e selecione o que deseja saber:</p><br>
+            <p id="deslize">Deslize para a esquerda ou para a direita e clique no que deseja saber:</p><br>
             <div class="slide-container swiper">
                 <div class="slide-content">
                     <div class="card-wrapper swiper-wrapper">
@@ -36,52 +47,52 @@
                                 <p class="description"></p>
                             </div>
                         </div>
-                        <a href="html/big.html" class="card swiper-slide" id="big" target="_blank">
+                        <a onclick="big()" class="card swiper-slide" id="big">
                             <div class="card-content">
                                 <p class="description">O que é Big Bang?</p>
                             </div>
                         </a>
-                        <a href="html/com.html" class="card swiper-slide" id="com" target="_blank">
+                        <a onclick="com()" class="card swiper-slide" id="com">
                             <div class="card-content">
                                 <p class="description">Composição do sistema solar</p>
                             </div>
                         </a>
-                        <a href="html/pla.html" class="card swiper-slide" id="pla" target="_blank">
+                        <a onclick="pla()" class="card swiper-slide" id="pla">
                             <div class="card-content">
                                 <p class="description">Os planetas do sistema solar</p>
                             </div>
                         </a>
-                        <a href="html/ast.html" class="card swiper-slide" id="ast" target="_blank">
+                        <a onclick="ast()" class="card swiper-slide" id="ast">
                             <div class="card-content">
                                 <p class="description">O que são asteroides?</s></p>
                             </div>
                         </a>
-                        <a href="html/mov.html" class="card swiper-slide" id="mov" target="_blank">
+                        <a onclick="mov()" class="card swiper-slide" id="mov">
                             <div class="card-content">
                                 <p class="description">Principais movimentos terrestres</p>
                             </div>
                         </a>
-                        <a href="html/rel.html" class="card swiper-slide" id="rel" target="_blank">
+                        <a onclick="relf()" class="card swiper-slide" id="rel">
                             <div class="card-content">
                                 <p class="description">Relação dos movimentos terrestres com as estações do ano</p>
                             </div>
                         </a>
-                        <a href="html/hem.html" class="card swiper-slide" id="hem" target="_blank">
+                        <a onclick="hem()" class="card swiper-slide" id="hem">
                             <div class="card-content">
-                                <p class="description">Diferença das estações nos hemisférios norte e sul</p>
+                                <p class="description">Diferença das estações do ano nos hemisférios norte e sul</p>
                             </div>
                         </a>
-                        <a href="html/lua.html" class="card swiper-slide" id="lua" target="_blank">
+                        <a onclick="lua()" class="card swiper-slide" id="lua">
                             <div class="card-content">
                                 <p class="description">Como a lua se movimenta?</p>
                             </div>
                         </a>
-                        <a href="html/ecl.html" class="card swiper-slide" id="ecl" target="_blank">
+                        <a onclick="eclf()" class="card swiper-slide" id="ecl">
                             <div class="card-content">
                                 <p class="description">O que são eclipses? Quais são seus tipos e porque ocorrem?</p>
                             </div>
                         </a>
-                        <a href="inf.html" class="card swiper-slide" id="inf" target="_blank">
+                        <a onclick="inf()" class="card swiper-slide" id="inf">
                             <div class="card-content">
                                 <p class="description">Influência da lua nos fenômenos terrestres</p>
                             </div>
@@ -93,15 +104,14 @@
                         </a>
                     </div>
                 </div>
-                <div class="swiper-button-next swiper-navBtn" onclick="right()"></div>
-                <div class="swiper-button-prev swiper-navBtn" onclick="left()"></div>
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
                 <div class="swiper-pagination"></div>
             </div>
         </main>
         <footer>
             <p>Clique na imagem a seguir para acessar meu GitHub:</p><br>
-            <a href="https://github.com/mwd-oficial" target="_blank"><img src="imagens/logoMWDt.png" alt="logo"
-                    id="logo"></a>
+            <img src="imagens/logoMWDt.png" alt="logo" onclick="logof()" id="logo">
         </footer>
     </div>
     <script src="js/swiper-bundle.min.js"></script>
