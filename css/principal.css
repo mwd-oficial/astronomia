@@ -29,9 +29,6 @@
     background-color: black;
 }
 
-html {
-    -webkit-tap-highlight-color: transparent;
-}
 
 body {
     min-height: 100vh;
