@@ -666,9 +666,9 @@ footer {
 
 @media screen and (max-width: 400px) {
     .logoOnClick {
-        transform: rotateZ(0deg) scale(1);
-        background-color: transparent;
-
+        transform: rotateZ(360deg) scale(1);
+        background-color: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
     }
     
     #astronauta {
