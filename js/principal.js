@@ -13,48 +13,6 @@ function fechar() {
     }
 }
 
-/*let imgperdiv = document.getElementById("imgperdiv")
-let imgpernor = document.getElementById("imgpernor")
-let imgperp = document.getElementById("imgperp")
-function ampliar() {
-    let imgpernordiv = document.getElementById("imgpernordiv")
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        imgpernordiv.classList.add("imgpernordivOnClick")
-        setTimeout(() => {
-            imgperdiv.style.display = "flex"
-            imgpernor.style.display = "none"
-            imgperp.style.display = "none"
-            
-        }, 1000)
-        setTimeout(() => {
-            imgpernordiv.classList.remove("imgpernordivOnClick")
-        }, 500)
-    } else {
-        imgperdiv.style.display = "flex"
-        imgpernor.style.display = "none"
-        imgperp.style.display = "none"
-    }
-}
-function minimizar() {
-    let imgperampdiv = document.getElementById("imgperampdiv")
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        imgperampdiv.classList.add("imgperampdivOnClick")
-        setTimeout(() => {
-            imgperdiv.style.display = "none"
-            imgperp.style.display = "inline-block"
-            imgpernor.style.display = "inline-block"
-        }, 1000)
-        setTimeout(() => {
-            imgperampdiv.classList.remove("imgperampdivOnClick")
-        }, 500)
-    } else {
-        imgperdiv.style.display = "none"
-        imgperp.style.display = "inline-block"
-        imgpernor.style.display = "inline-block"
-       
-    }
-}*/
-
 let imgperdiv = document.getElementById("imgperdiv")
 let imgpernor = document.getElementById("imgpernor")
 let imgperp = document.getElementById("imgperp")
