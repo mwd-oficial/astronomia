@@ -45,8 +45,8 @@ function ace() {
     var conteudo = document.getElementById("conteudo")
     var carregabox = document.getElementById("carregabox")
     podcastAudio.volume = .3
+    bcarregar.classList.add("bcarregarOnClick")
     if (window.matchMedia("(max-width: 768px)").matches) {
-        bcarregar.classList.add("bcarregarOnClick")
         setTimeout(() => {
             conteudo.style.display = "block"
             carregabox.style.display = "none"
@@ -59,15 +59,17 @@ function ace() {
         conteudo.style.display = "block"
         carregabox.style.display = "none"
         podcastAudio.play()
+
     }
+
 }
 
 var podcastAudio = document.getElementById('podcast-audio')
 var playBtn = document.getElementById('podcast-play')
 var pauseBtn = document.getElementById('podcast-pause')
 var playShow = function () {
+    playBtn.classList.add("podOnClick")
     if (window.matchMedia("(max-width: 768px)").matches) {
-        playBtn.classList.add("podOnClick")
         setTimeout(() => {
             podcastAudio.play()
             playBtn.style.display = "none"
@@ -75,17 +77,18 @@ var playShow = function () {
         }, 1000);
         setTimeout(() => {
             playBtn.classList.remove("podOnClick")
-        }, 1050)
+        }, 500)
     } else {
         podcastAudio.play()
         playBtn.style.display = "none"
         pauseBtn.style.display = "inline-block"
+
     }
 }
 
 var pauseShow = function () {
+    pauseBtn.classList.add("podOnClick")
     if (window.matchMedia("(max-width: 768px)").matches) {
-        pauseBtn.classList.add("podOnClick")
         setTimeout(() => {
             podcastAudio.pause()
             playBtn.style.display = "inline-block"
@@ -98,8 +101,10 @@ var pauseShow = function () {
         podcastAudio.pause()
         playBtn.style.display = "inline-block"
         pauseBtn.style.display = "none"
+
     }
 }
+
 
 
 function big() {
@@ -117,7 +122,9 @@ function big() {
         }, 500)
     } else {
         window.open('html/big.html', '_blank')
+
     }
+
 }
 
 
@@ -136,7 +143,9 @@ function relf() {
         }, 500)
     } else {
         window.open('html/rel.html', '_blank')
+
     }
+
 }
 function com() {
     var com1 = document.getElementById("com")
@@ -153,7 +162,9 @@ function com() {
         }, 500)
     } else {
         window.open('html/com.html', '_blank')
+
     }
+
 }
 function hem() {
     var hem1 = document.getElementById("hem")
@@ -170,7 +181,9 @@ function hem() {
         }, 500)
     } else {
         window.open('html/hem.html', '_blank')
+
     }
+
 }
 function pla() {
     var pla1 = document.getElementById("pla")
@@ -187,7 +200,9 @@ function pla() {
         }, 500)
     } else {
         window.open('html/pla.html', '_blank')
+
     }
+
 }
 function lua() {
     var lua1 = document.getElementById("lua")
@@ -204,7 +219,9 @@ function lua() {
         }, 500)
     } else {
         window.open('html/lua.html', '_blank')
+
     }
+
 }
 function ast() {
     var ast1 = document.getElementById("ast")
@@ -221,7 +238,9 @@ function ast() {
         }, 500)
     } else {
         window.open('html/ast.html', '_blank')
+
     }
+
 }
 function eclf() {
     var ecl1 = document.getElementById("ecl")
@@ -238,7 +257,9 @@ function eclf() {
         }, 500)
     } else {
         window.open('html/ecl.html', '_blank')
+
     }
+
 }
 function mov() {
     var mov1 = document.getElementById("mov")
@@ -255,7 +276,9 @@ function mov() {
         }, 500)
     } else {
         window.open('html/mov.html', '_blank')
+
     }
+
 }
 function inf() {
     var inf1 = document.getElementById("inf")
@@ -273,22 +296,23 @@ function inf() {
     } else {
         window.open('html/inf.html', '_blank')
     }
+
 }
 
 function logof() {
     var logo = document.getElementById("logo")
-    if (window.matchMedia("(max-width: 400px)").matches) {
-        logo.classList.add("logoOnClick")
+    logo.classList.add("logoOnClick")
+    if (window.matchMedia("(max-width: 768px)").matches) {
         setTimeout(() => {
             window.open('https://github.com/mwd-oficial', '_blank')
-        }, 1000);
+        }, 1000)
         setTimeout(() => {
             logo.classList.remove("logoOnClick")
-        }, 1050);
+        }, 1050)
     } else {
         window.open('https://github.com/mwd-oficial', '_blank')
-
     }
+
 
 }
 

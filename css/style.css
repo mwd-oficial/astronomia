@@ -38,6 +38,9 @@
     display: none;
 }
 
+html {
+    -webkit-tap-highlight-color: transparent;
+}
 
 body {
     min-height: 100vh;
@@ -102,6 +105,13 @@ body {
 
 }
 
+#aviso {
+    position: absolute;
+    top: 30px;
+    left: auto;
+    background-color: darkred;
+}
+
 #carregabox {
     position: absolute;
     display: flex;
@@ -139,7 +149,7 @@ body {
     display: none;
 }
 
-#bcarregar:hover, .bcarregarOnClick {
+.bcarregarOnClick {
     transform: scale(1.2);
     box-shadow: 0px 0px 20px white,
         0px 0px 20px rgba(255, 255, 255, .75),
@@ -226,7 +236,7 @@ p {
     transition-duration: .5s;
 }
 
-#podcast-play:hover, #podcast-pause:hover, .podOnClick {
+.podOnClick {
     box-shadow: 0px 0px 20px white,
         0px 0px 20px rgba(255, 255, 255, .75),
         0px 0px 20px rgba(255, 255, 255, .5),
@@ -263,6 +273,7 @@ p {
     margin-bottom: 30px;
     text-decoration: none;
     transition-duration: .5s;
+    cursor: pointer;
 }
 
 .card-content {
@@ -290,13 +301,14 @@ p {
     color: white;
     text-align: center;
     transition-duration: .5s;
+    cursor: pointer;
 }
 
 #big {
     border: 5px solid var(--cor1);
 }
 
-#big:hover, #rel:hover, .bigrel {
+.bigrel {
     box-shadow: 0px 0px 20px var(--cor1),
         0px 0px 20px var(--cor1t),
         0px 0px 20px var(--cor1t),
@@ -309,8 +321,7 @@ p {
 }
 
 
-#big:hover .description,
-#rel:hover .description, 
+
 .bigreldes {
     color: var(--cor1);
     transform: scale(1.2);
@@ -320,8 +331,7 @@ p {
     border: 5px solid var(--cor2);
 }
 
-#com:hover,
-#hem:hover,
+
 .comhem {
     box-shadow: 0px 0px 20px var(--cor2),
         0px 0px 20px var(--cor2t),
@@ -334,8 +344,7 @@ p {
     transform: scale(1.05);
 }
 
-#com:hover .description,
-#hem:hover .description,
+
 .comhemdes {
     color: var(--cor2);
     transform: scale(1.2);
@@ -345,8 +354,7 @@ p {
     border: 5px solid var(--cor3);
 }
 
-#pla:hover,
-#lua:hover,
+
 .plalua {
     box-shadow: 0px 0px 20px var(--cor3),
         0px 0px 20px var(--cor3t),
@@ -359,8 +367,7 @@ p {
     transform: scale(1.05);
 }
 
-#pla:hover .description,
-#lua:hover .description,
+
 .plaluades {
     color: var(--cor3);
     transform: scale(1.2);
@@ -370,8 +377,7 @@ p {
     border: 5px solid var(--cor4);
 }
 
-#ast:hover,
-#ecl:hover,
+
 .astecl {
     box-shadow: 0px 0px 20px var(--cor4),
         0px 0px 20px var(--cor4t),
@@ -384,8 +390,7 @@ p {
     transform: scale(1.05);
 }
 
-#ast:hover .description,
-#ecl:hover .description,
+
 .astecldes {
     color: var(--cor4);
     transform: scale(1.2);
@@ -395,8 +400,6 @@ p {
     border: 5px solid var(--cor5);
 }
 
-#mov:hover,
-#inf:hover,
 .movinf {
     box-shadow: 0px 0px 20px var(--cor5),
         0px 0px 20px var(--cor5t),
@@ -410,8 +413,6 @@ p {
 
 }
 
-#mov:hover .description,
-#inf:hover .description,
 .movinfdes {
     color: var(--cor5);
     transform: scale(1.2);
@@ -443,15 +444,7 @@ p {
     color: black;
     transition: background-color 0.3s ease;
     margin: 0px 20px;
-}
-
-.swiper-navBtn:hover {
-    background-color: white;
-    box-shadow: 0px 0px 20px white,
-        0px 0px 20px rgba(255, 255, 255, .75),
-        0px 0px 20px rgba(255, 255, 255, .5),
-        0px 0px 20px rgba(255, 255, 255, 0.25);
-
+    transition-duration: .5s;
 }
 
 .swiper-navBtn::before,
@@ -465,6 +458,10 @@ p {
 
 .swiper-button-prev {
     left: 0;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    top: 40%;
 }
 
 .swiper-pagination-bullet {
@@ -502,14 +499,146 @@ footer {
     margin-top: 60px;
     border-radius: 20px;
     transition-duration: .5s;
+    cursor: pointer;
 }
 
-#logo:hover,
 .logoOnClick {
     transform: rotateZ(360deg) scale(1.5);
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
 }
+
+@media screen and (min-width: 768px) {
+    #bcarregar:hover {
+        transform: scale(1.2);
+        box-shadow: 0px 0px 20px white,
+        0px 0px 20px rgba(255, 255, 255, .75),
+        0px 0px 20px rgba(255, 255, 255, .5),
+        0px 0px 20px rgba(255, 255, 255, 0.25);
+    }
+
+    #podcast-play:hover, #podcast-pause:hover {
+        box-shadow: 0px 0px 20px white,
+        0px 0px 20px rgba(255, 255, 255, .75),
+        0px 0px 20px rgba(255, 255, 255, .5),
+        0px 0px 20px rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+    }
+
+    #big:hover,
+    #rel:hover {
+        box-shadow: 0px 0px 20px var(--cor1),
+        0px 0px 20px var(--cor1t),
+        0px 0px 20px var(--cor1t),
+        0px 0px 20px var(--cor1t);
+        box-shadow: inset 0px 0px 20px var(--cor1),
+            0px 0px 20px var(--cor1t),
+            0px 0px 20px var(--cor1t),
+            0px 0px 20px var(--cor1t);
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    #com:hover,
+    #hem:hover {
+        box-shadow: 0px 0px 20px var(--cor2),
+        0px 0px 20px var(--cor2t),
+        0px 0px 20px var(--cor2t),
+        0px 0px 20px var(--cor2t);
+        box-shadow: inset 0px 0px 20px var(--cor2),
+            0px 0px 20px var(--cor2t),
+            0px 0px 20px var(--cor2t),
+            0px 0px 20px var(--cor2t);
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    #pla:hover,
+    #lua:hover {
+        box-shadow: 0px 0px 20px var(--cor3),
+        0px 0px 20px var(--cor3t),
+        0px 0px 20px var(--cor3t),
+        0px 0px 20px var(--cor3t);
+        box-shadow: inset 0px 0px 20px var(--cor3),
+            0px 0px 20px var(--cor3t),
+            0px 0px 20px var(--cor3t),
+            0px 0px 20px var(--cor3t);
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    #ast:hover,
+    #ecl:hover {
+        box-shadow: 0px 0px 20px var(--cor4),
+        0px 0px 20px var(--cor4t),
+        0px 0px 20px var(--cor4t),
+        0px 0px 20px var(--cor4t);
+        box-shadow: inset 0px 0px 20px var(--cor4),
+            0px 0px 20px var(--cor4t),
+            0px 0px 20px var(--cor4t),
+            0px 0px 20px var(--cor4t);
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    #mov:hover,
+    #inf:hover {
+        box-shadow: 0px 0px 20px var(--cor5),
+        0px 0px 20px var(--cor5t),
+        0px 0px 20px var(--cor5t),
+        0px 0px 20px var(--cor5t);
+        box-shadow: inset 0px 0px 20px var(--cor5),
+            0px 0px 20px var(--cor5t),
+            0px 0px 20px var(--cor5t),
+            0px 0px 20px var(--cor5t);
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    #big:hover .description,
+    #rel:hover .description {
+        color: var(--cor1);
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+    #com:hover .description,
+    #hem:hover .description  {
+        color: var(--cor2);
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+    #pla:hover .description,
+    #lua:hover .description   {
+        color: var(--cor3);
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+    #ast:hover .description,
+    #ecl:hover .description  {
+        color: var(--cor4);
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+    #mov:hover .description,
+    #inf:hover .description {
+        color: var(--cor5);
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+    
+    .swiper-navBtn:hover {
+        box-shadow: 0px 0px 20px white,
+        0px 0px 20px rgba(255, 255, 255, .75),
+        0px 0px 20px rgba(255, 255, 255, .5),
+        0px 0px 20px rgba(255, 255, 255, 0.25);
+        transform: scale(1.05);
+        transition-duration: .5s;
+    }
+
+    #logo:hover {
+        transform: rotateZ(360deg) scale(1.5);
+        background-color: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+    }
+}
+
+/*----------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 768px) {
     .slide-content {
@@ -533,21 +662,13 @@ footer {
         font-size: 1.5em;
     }
 
-    #podcast-play:hover, #podcast-pause:hover,  #bcarregar:hover, #podcast-play:hover, #podcast-pause:hover, #big:hover, #rel:hover, #big:hover .description, #rel:hover .description, #com:hover, #hem:hover, #com:hover .description, #hem:hover .description, #pla:hover, #lua:hover, #pla:hover .description, #lua:hover .description, #ast:hover, #ecl:hover, #ast:hover .description, #ecl:hover .description, #mov:hover, #inf:hover, #mov:hover .description, #inf:hover .description{
-        color: white;
-        box-shadow: 0px 0px 0px transparent;
-        transform: scale(1);
-    }
-
 }
 
 @media screen and (max-width: 400px) {
-    #logo:hover {
+    .logoOnClick {
         transform: rotateZ(0deg) scale(1);
         background-color: transparent;
-    }
-    .logoOnClick {
-        transform: rotateZ(360deg);
+
     }
     
     #astronauta {

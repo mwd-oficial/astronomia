@@ -29,6 +29,9 @@
     background-color: black;
 }
 
+html {
+    -webkit-tap-highlight-color: transparent;
+}
 
 body {
     min-height: 100vh;
@@ -54,7 +57,6 @@ body {
     transition-duration: .5s;
 }
 
-#setavoltar:hover,
 .setavoltarOnClick {
     box-shadow: 0px 0px 20px white,
         0px 0px 20px rgba(255, 255, 255, .75),
@@ -83,6 +85,10 @@ h1 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+h2 {
+    margin: 20px 0px;
+} 
+
 .sombra {
     background-color: rgba(0, 0, 0, .5);
     padding: 0;
@@ -92,6 +98,7 @@ h1 {
 p {
     padding: 10px 0px;
 }
+
 
 #imgpernordiv,
 #imgpernordiv2,
@@ -140,11 +147,9 @@ p {
     border-radius: 20px 20px 0px 0px;
 }
 
-#imgpernordiv:hover,
-.imgpernordivOnClick,
-#imgpernordiv2:hover,
-#imgpernordiv3:hover,
-#imgpernordiv4:hover {
+
+.imgpernordivOnClick
+{
     box-shadow: 0px 0px 20px 5px white;
     transform: scale(1.05);
 }
@@ -162,6 +167,7 @@ p {
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 
 #imgperampdiv,
@@ -187,13 +193,13 @@ p {
     border-radius: 20px 20px 0px 0px;
 }
 
-#imgperampdiv:hover,
+
 .imgperampdivOnClick,
-#imgperampdiv2:hover,
+
 .imgperampdiv2OnClick,
-#imgperampdiv3:hover,
+
 .imgperampdiv3OnClick,
-#imgperampdiv4:hover,
+
 .imgperampdiv4OnClick {
     transform: scale(1.05);
     box-shadow: 0px 0px 20px 5px white;
@@ -211,18 +217,49 @@ footer {
     margin-bottom: 60px;
     margin-top: 60px;
     border-radius: 20px;
+    transition-duration: 0.5s;
+    cursor: pointer;
 }
 
-#logo:hover {
-    transition-duration: 0.5s;
+.logoOnClick {
     transform: rotateZ(360deg) scale(1.5);
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
 }
 
-#logo:not(:hover) {
-    transition-duration: 0.5s;
+@media screen and (min-width: 768px) {
+    #setavoltar:hover {
+        box-shadow: 0px 0px 20px white,
+        0px 0px 20px rgba(255, 255, 255, .75),
+        0px 0px 20px rgba(255, 255, 255, .5),
+        0px 0px 20px rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+    }
+
+    #imgpernordiv:hover,
+    #imgpernordiv2:hover,
+    #imgpernordiv3:hover,
+    #imgpernordiv4:hover {
+        box-shadow: 0px 0px 20px 5px white;
+        transform: scale(1.05);
+    }
+
+    #imgperampdiv:hover,
+    #imgperampdiv2:hover,
+    #imgperampdiv3:hover,
+    #imgperampdiv4:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 20px 5px white;
+    }
+
+    #logo:hover {
+        transform: rotateZ(360deg) scale(1.5);
+        background-color: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+    }
 }
+
+/*------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 768px) {
     h1 {
@@ -233,26 +270,20 @@ footer {
         padding: 10px;
     }
 
-    #setavoltar:hover, 
-    #imgpernordiv:hover, #imgperampdiv:hover,
-    #imgpernordiv2:hover, #imgperampdiv2:hover,
-    #imgpernordiv3:hover, #imgperampdiv3:hover,
-    #imgpernordiv4:hover, #imgperampdiv4:hover {
-        box-shadow: 0px 0px 0px transparent;
-        transform: scale(1);
-    }
-
     #imgperampdiv,
     #imgperampdiv2,
     #imgperampdiv3,
     #imgperampdiv4 {
         width: 90vw;
     }
-
+    
 }
 
 @media screen and (max-width: 400px) {
-    #logo:hover {
-        transform: rotateZ(360deg);
+    .logoOnClick {
+        transform: rotateZ(360deg) scale(1);
+        background-color: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
     }
+    
 }

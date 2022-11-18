@@ -13,6 +13,7 @@
 
 <body id="corpo" onload="carregando()">
     <div id="carregabox">
+        <p id="aviso">Aviso: navegadores como safari não suportam algumas funcionalidades.</p>
         <div style="margin: 20px 0px;" id="carregar"></div>
         <p id="pcarregar">Carregando</p>
         <button id="bcarregar" onclick="ace()">Acessar</button>
@@ -20,18 +21,18 @@
     <div id="conteudo">
         <img src="imagens/astronauta.png" alt="" id="astronauta">
         <header>
+            <audio src="espaço.mp3" id="podcast-audio" loop></audio>
             <h1>Astronomia: Principais Conceitos</h1><br>
             <p style="margin-bottom: 10px;">Feito por Mateus Gonçalves, João Pedro, Gabriel Chieregato e João Grandchamp
             </p><br>
-            <audio src="espaço.mp3" id="podcast-audio" loop></audio>
-            <div class="player-ctrl">
-
+            <div class="player-ctrl"><br>
+                
                 <!-- Play Button -->
                 <a id="podcast-play" onclick="playShow()" style="display:none;"><img src="imagens/volume-mute.svg"
-                        alt="" class="volumeimg"></a>
-
-                <!-- Pause Button -->
-                <a id="podcast-pause" onclick="pauseShow()"><img src="imagens/volume-high.svg" alt=""
+                    alt="" class="volumeimg"></a>
+                    
+                    <!-- Pause Button -->
+                    <a id="podcast-pause" onclick="pauseShow()"><img src="imagens/volume-high.svg" alt=""
                         class="volumeimg"></a>
             </div>
             <hr style="margin-top: 10px;">
