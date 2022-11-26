@@ -47,7 +47,6 @@ body {
     overflow-x: hidden;
 }
 
-
 #setavoltar {
     max-width: 75px;
     background-color: white;
@@ -228,14 +227,109 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+    #nave {
+        position: absolute;
+        top: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanave 2.5s linear infinite;
+    }
+    
+    #nave2 {
+        position: absolute;
+        top: 165%;
+        left: 15%;
+        transform: translate(-25%, -100%);
+        width: 60vw;
+        animation: animanave 2.5s linear infinite;
+        animation-delay: 1.875s;
+    }
+    #nave3 {
+        position: absolute;
+        top: 165%;
+        left: 85%;
+        transform: translate(-75%, -100%);
+        width: 60vw;
+        animation: animanave 2.5s linear infinite;
+        animation-delay: .625s;
+    }
+    #nave4 {
+        position: absolute;
+        top: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanave 2.5s linear infinite;
+        animation-delay: 1.25s;
+    }
+
+    #navealien {
+        position: absolute;
+        bottom: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanavealien 5s linear infinite;
+    }
+    
+    #navealien2 {
+        position: absolute;
+        bottom: 165%;
+        left: 15%;
+        transform: translate(-25%, -100%);
+        width: 60vw;
+        animation: animanavealien 5s linear infinite;
+        animation-delay: 3.75s;
+    }
+    #navealien3 {
+        position: absolute;
+        bottom: 165%;
+        left: 85%;
+        transform: translate(-75%, -100%);
+        width: 60vw;
+        animation: animanavealien 5s linear infinite;
+        animation-delay: 1.25s;
+    }
+    #navealien4 {
+        position: absolute;
+        bottom: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanavealien 5s linear infinite;
+        animation-delay: 2.5s;
+    }
+    
+    #navediv {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 200vh;
+        width: 100vw;
+        overflow: hidden;
+        z-index: -1;
+    }
+    @keyframes animanave {
+        to {
+            top: -300%;
+        }
+    }
+    @keyframes animanavealien {
+        to {
+            bottom: -300%;
+        }
+    }
+    
     #setavoltar:hover {
         box-shadow: 0px 0px 20px white,
         0px 0px 20px rgba(255, 255, 255, .75),
         0px 0px 20px rgba(255, 255, 255, .5),
         0px 0px 20px rgba(255, 255, 255, 0.25);
-    transform: scale(1.05);
+        transform: scale(1.05);
     }
-
+    
+    
     #imgpernordiv:hover,
     #imgpernordiv2:hover,
     #imgpernordiv3:hover,
@@ -269,7 +363,101 @@ footer {
     main {
         padding: 10px;
     }
+    #nave {
+        position: absolute;
+        top: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanavecell 2.5s linear infinite;
+    }
+    
+    #nave2 {
+        position: absolute;
+        top: 165%;
+        left: 15%;
+        transform: translate(-25%, -100%);
+        width: 60vw;
+        animation: animanavecell 2.5s linear infinite;
+        animation-delay: 1.875s;
+    }
+    #nave3 {
+        position: absolute;
+        top: 165%;
+        left: 85%;
+        transform: translate(-75%, -100%);
+        width: 60vw;
+        animation: animanavecell 2.5s linear infinite;
+        animation-delay: .625s;
+    }
+    #nave4 {
+        position: absolute;
+        top: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanavecell 2.5s linear infinite;
+        animation-delay: 1.25s;
+    }
+    
+    #navealien {
+        position: absolute;
+        bottom: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanavealiencell 2.5s linear infinite;
+    }
+    
+    #navealien2 {
+        position: absolute;
+        bottom: 165%;
+        left: 15%;
+        transform: translate(-25%, -100%);
+        width: 60vw;
+        animation: animanavealiencell 2.5s linear infinite;
+        animation-delay: 1.875s;
+    }
+    #navealien3 {
+        position: absolute;
+        bottom: 165%;
+        left: 85%;
+        transform: translate(-75%, -100%);
+        width: 60vw;
+        animation: animanavealiencell 2.5s linear infinite;
+        animation-delay: .625s;
+    }
+    #navealien4 {
+        position: absolute;
+        bottom: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanavealiencell 2.5s linear infinite;
+        animation-delay: 1.25s;
+    }
+    
+    @keyframes animanavecell {
+        to {
+            top: 0%;
+        }
+    }
+    @keyframes animanavealiencell {
+        to {
+            bottom: 0%;
+        }
+    }
 
+    #navediv {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 210vh;
+        width: 100vw;
+        overflow: hidden;
+        z-index: -1;
+    }
+    
     #imgperampdiv,
     #imgperampdiv2,
     #imgperampdiv3,
@@ -280,6 +468,15 @@ footer {
 }
 
 @media screen and (max-width: 400px) {
+    #navediv {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 230vh;
+        width: 100vw;
+        overflow: hidden;
+        z-index: -1;
+    }
     .logoOnClick {
         transform: rotateZ(360deg) scale(1);
         background-color: rgba(255, 255, 255, 0.2);
