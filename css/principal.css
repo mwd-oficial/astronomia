@@ -29,6 +29,15 @@
     background-color: black;
 }
 
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
 body {
     min-height: 100vh;
     font-family: 'Share Tech Mono', monospace;
@@ -40,8 +49,9 @@ body {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-
+    overflow-x: hidden;
 }
+
 
 
 #setavoltar {
@@ -50,6 +60,15 @@ body {
     border-radius: 50%;
     margin: 10px;
     cursor: pointer;
+    transition-duration: .5s;
+}
+
+.setavoltarOnClick {
+    box-shadow: 0px 0px 20px white,
+        0px 0px 20px rgba(255, 255, 255, .75),
+        0px 0px 20px rgba(255, 255, 255, .5),
+        0px 0px 20px rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
 }
 
 main {
@@ -72,6 +91,10 @@ h1 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+h2 {
+    margin: 20px 0px;
+} 
+
 .sombra {
     background-color: rgba(0, 0, 0, .5);
     padding: 0;
@@ -80,6 +103,112 @@ h1 {
 
 p {
     padding: 10px 0px;
+}
+
+
+#imgpernordiv,
+#imgpernordiv2,
+#imgpernordiv3,
+#imgpernordiv4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition-duration: .5s;
+    border-radius: 20px;
+
+    
+}
+
+#imgperp,
+#imgperampp,
+#imgperp2,
+#imgperampp2,
+#imgperp3,
+#imgperampp3,
+#imgperp4,
+#imgperampp4 {
+    color: black;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+
+    
+}
+
+#imgpernor,
+#imgpernor2,
+#imgpernor3,
+#imgpernor4 {
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 20px 20px 0px 0px;
+}
+
+
+.imgpernordivOnClick
+{
+    box-shadow: 0px 0px 20px 5px white;
+    transform: scale(1.05);
+}
+
+#imgperdiv,
+#imgperdiv2,
+#imgperdiv3,
+#imgperdiv4 {
+    background-color: rgba(0, 0, 0, .7);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#imgperampdiv,
+#imgperampdiv2,
+#imgperampdiv3,
+#imgperampdiv4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 2px solid white;
+    transition-duration: .5s;
+    cursor: pointer;
+    width: 60vw;
+}
+
+#imgperamp,
+#imgperamp2,
+#imgperamp3,
+#imgperamp4 {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+
+.imgperampdivOnClick,
+
+.imgperampdiv2OnClick,
+
+.imgperampdiv3OnClick,
+
+.imgperampdiv4OnClick {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px 5px white;
 }
 
 footer {
@@ -94,31 +223,271 @@ footer {
     margin-bottom: 60px;
     margin-top: 60px;
     border-radius: 20px;
+    transition-duration: 0.5s;
+    cursor: pointer;
 }
 
-#logo:hover {
-    transition-duration: 0.5s;
+.logoOnClick {
     transform: rotateZ(360deg) scale(1.5);
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
 }
 
-#logo:not(:hover) {
-    transition-duration: 0.5s;
+@media screen and (min-width: 768px) {
+    #nave {
+        position: absolute;
+        top: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanave 2.5s linear infinite;
+    }
+    
+    #nave2 {
+        position: absolute;
+        top: 165%;
+        left: 15%;
+        transform: translate(-25%, -100%);
+        width: 60vw;
+        animation: animanave 2.5s linear infinite;
+        animation-delay: 1.875s;
+    }
+    #nave3 {
+        position: absolute;
+        top: 165%;
+        left: 85%;
+        transform: translate(-75%, -100%);
+        width: 60vw;
+        animation: animanave 2.5s linear infinite;
+        animation-delay: .625s;
+    }
+    #nave4 {
+        position: absolute;
+        top: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanave 2.5s linear infinite;
+        animation-delay: 1.25s;
+    }
+
+    #navealien {
+        position: absolute;
+        bottom: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanavealien 5s linear infinite;
+    }
+    
+    #navealien2 {
+        position: absolute;
+        bottom: 165%;
+        left: 15%;
+        transform: translate(-25%, -100%);
+        width: 60vw;
+        animation: animanavealien 5s linear infinite;
+        animation-delay: 3.75s;
+    }
+    #navealien3 {
+        position: absolute;
+        bottom: 165%;
+        left: 85%;
+        transform: translate(-75%, -100%);
+        width: 60vw;
+        animation: animanavealien 5s linear infinite;
+        animation-delay: 1.25s;
+    }
+    #navealien4 {
+        position: absolute;
+        bottom: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanavealien 5s linear infinite;
+        animation-delay: 2.5s;
+    }
+    
+    #navediv {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 200vh;
+        width: 100vw;
+        overflow: hidden;
+        z-index: -1;
+    }
+    @keyframes animanave {
+        to {
+            top: -300%;
+        }
+    }
+    @keyframes animanavealien {
+        to {
+            bottom: -300%;
+        }
+    }
+    
+    #setavoltar:hover {
+        box-shadow: 0px 0px 20px white,
+        0px 0px 20px rgba(255, 255, 255, .75),
+        0px 0px 20px rgba(255, 255, 255, .5),
+        0px 0px 20px rgba(255, 255, 255, 0.25);
+        transform: scale(1.05);
+    }
+    
+    
+    #imgpernordiv:hover,
+    #imgpernordiv2:hover,
+    #imgpernordiv3:hover,
+    #imgpernordiv4:hover {
+        box-shadow: 0px 0px 20px 5px white;
+        transform: scale(1.05);
+    }
+
+    #imgperampdiv:hover,
+    #imgperampdiv2:hover,
+    #imgperampdiv3:hover,
+    #imgperampdiv4:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 20px 5px white;
+    }
+
+    #logo:hover {
+        transform: rotateZ(360deg) scale(1.5);
+        background-color: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+    }
 }
+
+/*------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 1.5em;
     }
+
     main {
         padding: 10px;
     }
+    #nave {
+        position: absolute;
+        top: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanavecell 2.5s linear infinite;
+    }
+    
+    #nave2 {
+        position: absolute;
+        top: 165%;
+        left: 15%;
+        transform: translate(-25%, -100%);
+        width: 60vw;
+        animation: animanavecell 2.5s linear infinite;
+        animation-delay: 1.875s;
+    }
+    #nave3 {
+        position: absolute;
+        top: 165%;
+        left: 85%;
+        transform: translate(-75%, -100%);
+        width: 60vw;
+        animation: animanavecell 2.5s linear infinite;
+        animation-delay: .625s;
+    }
+    #nave4 {
+        position: absolute;
+        top: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanavecell 2.5s linear infinite;
+        animation-delay: 1.25s;
+    }
+    
+    #navealien {
+        position: absolute;
+        bottom: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanavealiencell 2.5s linear infinite;
+    }
+    
+    #navealien2 {
+        position: absolute;
+        bottom: 165%;
+        left: 15%;
+        transform: translate(-25%, -100%);
+        width: 60vw;
+        animation: animanavealiencell 2.5s linear infinite;
+        animation-delay: 1.875s;
+    }
+    #navealien3 {
+        position: absolute;
+        bottom: 165%;
+        left: 85%;
+        transform: translate(-75%, -100%);
+        width: 60vw;
+        animation: animanavealiencell 2.5s linear infinite;
+        animation-delay: .625s;
+    }
+    #navealien4 {
+        position: absolute;
+        bottom: 165%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 60vw;
+        animation: animanavealiencell 2.5s linear infinite;
+        animation-delay: 1.25s;
+    }
+    
+    @keyframes animanavecell {
+        to {
+            top: 0%;
+        }
+    }
+    @keyframes animanavealiencell {
+        to {
+            bottom: 0%;
+        }
+    }
+
+    #navediv {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 210vh;
+        width: 100vw;
+        overflow: hidden;
+        z-index: -1;
+    }
+    
+    #imgperampdiv,
+    #imgperampdiv2,
+    #imgperampdiv3,
+    #imgperampdiv4 {
+        width: 90vw;
+    }
+    
 }
 
 @media screen and (max-width: 400px) {
-    #logo:hover {
-        transform: rotateZ(360deg);
+    #navediv {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 230vh;
+        width: 100vw;
+        overflow: hidden;
+        z-index: -1;
     }
-
+    .logoOnClick {
+        transform: rotateZ(360deg) scale(1);
+        background-color: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+    }
+    
 }

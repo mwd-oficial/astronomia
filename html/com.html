@@ -18,6 +18,12 @@
 </head>
 
 <body>
+    <div id="navediv">
+        <img src="../imagens/navealien.png" alt="navealien" id="navealien">
+        <img src="../imagens/navealien.png" alt="navealien2" id="navealien2">
+        <img src="../imagens/navealien.png" alt="navealien3" id="navealien3">
+        <img src="../imagens/navealien.png" alt="navealien4" id="navealien4">
+    </div>
     <header>
         <h1>Astronomia: Principais Conceitos</h1><br>
         <p class="sombra">Feito por Mateus Gonçalves, João Pedro, Gabriel Chieregato e João Grandchamp</p>
@@ -25,13 +31,22 @@
         <img src="../imagens/setavoltar.svg" alt="" onclick="fechar()" id="setavoltar">
     </header>
     <main>
+        <div id="imgperdiv">
+            <div id="imgperampdiv">
+                <img src="../imagens/comimg.jpg" alt="" id="imgperamp" onclick="minimizar()">
+                <p id="imgperampp">Clique para minimizar</p>
+            </div>
+        </div>
         <h1 style="background-color: transparent;">Composição do sistema solar</h1>
+        <div id="imgpernordiv">
+            <img src="../imagens/comimg.jpg" alt="" id="imgpernor" onclick="ampliar()">
+            <p id="imgperp">Clique para ampliar</p>
+        </div>
        <p>O nosso sistema solar consiste de uma estrela , a que chamamos o Sol, os planetas Mercúrio, Vénus, Terra, Marte, Júpiter, Saturno entre outros . Inclui: os satélites dos planetas; numerosos cometas, asteróides, e meteoróides; e o espaço interplanetário.</p>
     </main>
     <footer>
         <p class="sombra">Clique na imagem a seguir para acessar meu GitHub:</p><br>
-        <a href="https://github.com/mwd-oficial" target="_blank"><img src="../imagens/logoMWDt.png" alt="logo" id="logo"></a>
-    </footer>
+        <img src="../imagens/logoMWDt.png" alt="logo" id="logo" onclick="logof()">
     <script src="../js/principal.js"></script>
 </body>
 </html>

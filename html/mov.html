@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
         body {
             background-image: url("../imagens/espaço5.jpg");
         }
+
         main {
             border: 10px solid var(--cor5);
         }
@@ -18,6 +20,12 @@
 </head>
 
 <body>
+    <div id="navediv">
+        <img src="../imagens/nave.png" alt="nave" id="nave">
+        <img src="../imagens/nave.png" alt="nave2" id="nave2">
+        <img src="../imagens/nave.png" alt="nave3" id="nave3">
+        <img src="../imagens/nave.png" alt="nave4" id="nave4">
+    </div>
     <header>
         <h1>Astronomia: Principais Conceitos</h1><br>
         <p class="sombra">Feito por Mateus Gonçalves, João Pedro, Gabriel Chieregato e João Grandchamp</p>
@@ -25,44 +33,59 @@
         <img src="../imagens/setavoltar.svg" alt="" onclick="fechar()" id="setavoltar">
     </header>
     <main>
+        <div id="imgperdiv">
+            <div id="imgperampdiv">
+                <img src="../imagens/movrimg.jpg" alt="" id="imgperamp" onclick="minimizar()">
+                <p id="imgperampp">Clique para minimizar</p>
+            </div>
+        </div>
+        <div id="imgperdiv2">
+            <div id="imgperampdiv2">
+                <img src="../imagens/movtimg.jpg" alt="" id="imgperamp2" onclick="minimizar2()">
+                <p id="imgperampp2">Clique para minimizar</p>
+            </div>
+        </div>
         <h1 style="background-color: transparent;">Principais movimentos terrestres</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur optio in assumenda nesciunt, nisi culpa aperiam necessitatibus accusantium, quo similique totam neque ut, quaerat non velit quisquam! Aliquam, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aliquid numquam eius, repellendus dolor aperiam totam deserunt exercitationem molestias voluptate distinctio voluptates optio, fugit laboriosam provident, consequuntur ipsam quae. Tenetur!</p>
+        <p>
+            Os principais movimentos da Terra, isto é, aqueles que possuem um efeito direto mais notório em nossas
+            vidas, são a rotação e a translação.
+        </p>
+        <h2>Rotação</h2>
+        <div id="imgpernordiv">
+            <img src="../imagens/movrimg.jpg" alt="" id="imgpernor" onclick="ampliar()">
+            <p id="imgperp">Clique para ampliar</p>
+        </div>
+        <p>
+            A rotação é o movimento que a Terra realiza em torno do seu próprio eixo. É responsável pela alternância
+            entre o período de tempo ensolarado e o período de tempo sem incidência solar direta conhecidos como dia e
+            noite. Esse movimento é realizado em um período de aproximadamente 23 horas, 56 minutos e 4 segundos. A
+            rotação ocorre no sentido anti-horário, de oeste para leste.
+        </p>
+        <h2>Translação</h2>
+        <div id="imgpernordiv2">
+            <img src="../imagens/movtimg.jpg" alt="" id="imgpernor2" onclick="ampliar2()">
+            <p id="imgperp2">Clique para ampliar</p>
+        </div>
+
+        <p>
+            O movimento de translação acontece quando a Terra completa uma volta ao redor do Sol. Ele dura,
+            aproximadamente, 365 dias e seis horas. Diante disso, a cada quatro anos, um dia é colocado a mais no ano no
+            mês de fevereiro. Quando isso ocorre, tal ano é chamado de ano bissexto.
+        </p>
+
+        <p>
+            Além da rotação e da translação, a Terra realiza outros movimentos, com destaque para a nutação (oscilação
+            do eixo de rotação da Terra), revolução (deslocamento da Terra em torno do centro da Via Láctea) e precessão
+            dos equinócios (movimento do eixo da Terra).
+
+        </p>
     </main>
     <footer>
         <p class="sombra">Clique na imagem a seguir para acessar meu GitHub:</p><br>
-        <a href="https://github.com/mwd-oficial" target="_blank"><img src="../imagens/logoMWDt.png" alt="logo" id="logo"></a>
+        <img src="../imagens/logoMWDt.png" alt="logo" id="logo" onclick="logof()">
     </footer>
     <script src="../js/principal.js"></script>
+
 </body>
+
 </html>
