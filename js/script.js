@@ -157,7 +157,7 @@ function com() {
             window.open('html/com.html', '_blank')
         }, 1000)
         setTimeout(() => {
-            rel1.classList.remove("comhem")
+            com1.classList.remove("comhem")
             des.classList.remove("comhemdes")
         }, 500)
     } else {
