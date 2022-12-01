@@ -29,6 +29,11 @@
     background-color: black;
 }
 
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+
 html {
     -webkit-tap-highlight-color: transparent;
 }
@@ -46,6 +51,8 @@ body {
     background-attachment: fixed;
     overflow-x: hidden;
 }
+
+
 
 #setavoltar {
     max-width: 75px;
