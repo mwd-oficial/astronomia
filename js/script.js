@@ -304,13 +304,13 @@ function logof() {
     logo.classList.add("logoOnClick")
     if (window.matchMedia("(max-width: 768px)").matches) {
         setTimeout(() => {
-            window.open('https://github.com/mwd-oficial', '_blank')
+            window.open('https://mwd-oficial.github.io/sobre', '_blank')
         }, 1000)
         setTimeout(() => {
             logo.classList.remove("logoOnClick")
         }, 1050)
     } else {
-        window.open('https://github.com/mwd-oficial', '_blank')
+        window.open('https://mwd-oficial.github.io/sobre', '_blank')
     }
 
 
